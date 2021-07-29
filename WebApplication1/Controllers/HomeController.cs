@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -20,6 +21,8 @@ namespace WebApplication1.Controllers
 
         public IActionResult Index()
         {
+            var testString = "Korhan";
+            var serializedString = JsonConvert.SerializeObject(testString);
             return View();
         }
 
